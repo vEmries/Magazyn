@@ -18,32 +18,32 @@ public class OfflineQueries {
 
 //        System.out.println("------------------------------------------------------------");
 //
-//        System.out.println("--> " + userRepo.getUsersIDs());
+//        System.out.println("--> " + userRepo.getUserIDs());
 //        System.out.println("--> " + userRepo.findAll());
 
 //        System.out.println("------------------------------------------------------------");
 //
-//        System.out.println("--> " + shipperRepo.getShippersIDs());
+//        System.out.println("--> " + shipperRepo.getShipperIDs());
 //        System.out.println("--> " + shipperRepo.findAll());
 
 //        System.out.println("------------------------------------------------------------");
 //
-//        System.out.println("--> " + productInfoRepo.getProductsInfoIDs());
+//        System.out.println("--> " + productInfoRepo.getProductInfoIDs());
 //        System.out.println("--> " + productInfoRepo.findAll());
 
 //        System.out.println("------------------------------------------------------------");
 //
-//        System.out.println("--> " + incomingShipmentRepo.getIncomingShipmentsIDs());
+//        System.out.println("--> " + incomingShipmentRepo.getIncomingShipmentIDs());
 //        System.out.println("--> " + incomingShipmentRepo.findAll());
 
 //        System.out.println("------------------------------------------------------------");
 //
-//        System.out.println("--> " + outgoingShipmentRepo.getOutgoingShipmentsIDs());
+//        System.out.println("--> " + outgoingShipmentRepo.getOutgoingShipmentIDs());
 //        System.out.println("--> " + outgoingShipmentRepo.findAll());
 
         System.out.println("------------------------------------------------------------");
 
-        System.out.println("--> " + warehouseStockRepo.getProductsIDs());
+        System.out.println("--> " + warehouseStockRepo.getProductIDs());
         System.out.println("--> " + warehouseStockRepo.findAll());
 
 

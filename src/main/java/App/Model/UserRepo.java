@@ -10,5 +10,5 @@ public interface UserRepo extends CrudRepository<User, Integer> {
     List<User> findByUsernameContaining(String userName);
 
     @Query("select u.userid from User u")
-    List<Integer> getUsersIDs();
+    List<Integer> getUserIDs();
 }

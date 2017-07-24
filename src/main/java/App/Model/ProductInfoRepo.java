@@ -10,5 +10,5 @@ public interface ProductInfoRepo extends CrudRepository<ProductInfo, Integer> {
     List<ProductInfo> findByProductnameContaining(String productName);
 
     @Query("select p.detailid from ProductInfo p")
-    List<Integer> getProductsInfoIDs();
+    List<Integer> getProductInfoIDs();
 }

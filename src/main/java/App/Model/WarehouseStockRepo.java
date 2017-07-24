@@ -10,5 +10,5 @@ public interface WarehouseStockRepo extends CrudRepository<WarehouseStock, Integ
     List<WarehouseStock> findByProductnameContaining(String productName);
 
     @Query("select w.productid from WarehouseStock w")
-    List<Integer> getProductsIDs();
+    List<Integer> getProductIDs();
 }

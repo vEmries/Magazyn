@@ -10,5 +10,5 @@ public interface ShipperRepo extends CrudRepository<Shipper, Integer> {
     List<Shipper> findByShippernameContaining(String shipperName);
 
     @Query("select s.shipperid from Shipper s")
-    List<Integer> getShippersIDs();
+    List<Integer> getShipperIDs();
 }

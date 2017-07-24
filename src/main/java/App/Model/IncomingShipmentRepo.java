@@ -8,5 +8,5 @@ import java.util.List;
 public interface IncomingShipmentRepo extends CrudRepository<IncomingShipment, Integer>{
 
     @Query("select s.shipmentid from IncomingShipment s")
-    List<Integer> getIncomingShipmentsIDs();
+    List<Integer> getIncomingShipmentIDs();
 }
