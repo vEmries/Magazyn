@@ -2,6 +2,7 @@ package App;
 
 import App.Config.BasicConfig;
 import App.Model.*;
+import App.Service.ProductService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class OfflineQueries {
@@ -15,6 +16,8 @@ public class OfflineQueries {
         IncomingShipmentRepo incomingShipmentRepo = ctx.getBean(IncomingShipmentRepo.class);
         OutgoingShipmentRepo outgoingShipmentRepo = ctx.getBean(OutgoingShipmentRepo.class);
         WarehouseStockRepo warehouseStockRepo = ctx.getBean(WarehouseStockRepo.class);
+
+        ProductService productService = ctx.getBean(ProductService.class);
 
 //        System.out.println("------------------------------------------------------------");
 //
@@ -41,10 +44,17 @@ public class OfflineQueries {
 //        System.out.println("--> " + outgoingShipmentRepo.getOutgoingShipmentIDs());
 //        System.out.println("--> " + outgoingShipmentRepo.findAll());
 
+//        System.out.println("------------------------------------------------------------");
+//
+//        System.out.println("--> " + warehouseStockRepo.getProductIDs());
+//        System.out.println("--> " + warehouseStockRepo.findAll());
+
         System.out.println("------------------------------------------------------------");
 
-        System.out.println("--> " + warehouseStockRepo.getProductIDs());
-        System.out.println("--> " + warehouseStockRepo.findAll());
+//        productService.createNewProduct("Japka - luz", "Brak opakowania", "1szt = 1kg", 100);
+//        productService.updateProductInfo(8, "Japka - luz", "Brak opakowania", "1szt = 1,5kg");
+//        productService.deleteProduct(7);
+//        productService.updateProductQuantity(8, 150);
 
 
         ctx.close();
