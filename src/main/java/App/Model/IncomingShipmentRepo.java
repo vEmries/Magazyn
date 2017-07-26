@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface IncomingShipmentRepo extends CrudRepository<IncomingShipment, Integer>{
 
+    List<IncomingShipment> findByShipmentnumber(String shipmentNumber);
+
     @Query("select s.shipmentid from IncomingShipment s")
     List<Integer> getIncomingShipmentIDs();
 }

@@ -3,6 +3,8 @@ package App;
 import App.Config.BasicConfig;
 import App.Model.*;
 import App.Service.ProductService;
+import App.Service.ShipmentService;
+import App.Service.ShipperService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class OfflineQueries {
@@ -18,6 +20,8 @@ public class OfflineQueries {
         WarehouseStockRepo warehouseStockRepo = ctx.getBean(WarehouseStockRepo.class);
 
         ProductService productService = ctx.getBean(ProductService.class);
+        ShipmentService shipmentService = ctx.getBean(ShipmentService.class);
+        ShipperService shipperService = ctx.getBean(ShipperService.class);
 
 //        System.out.println("------------------------------------------------------------");
 //
@@ -49,12 +53,19 @@ public class OfflineQueries {
 //        System.out.println("--> " + warehouseStockRepo.getProductIDs());
 //        System.out.println("--> " + warehouseStockRepo.findAll());
 
-        System.out.println("------------------------------------------------------------");
+//        System.out.println("------------------------------------------------------------");
 
 //        productService.createNewProduct("Japka - luz", "Brak opakowania", "1szt = 1kg", 100);
 //        productService.updateProductInfo(8, "Japka - luz", "Brak opakowania", "1szt = 1,5kg");
 //        productService.deleteProduct(7);
-//        productService.updateProductQuantity(8, 150);
+
+//        System.out.println("------------------------------------------------------------");
+//        shipmentService.createNewIncomingShipment(1, 2, 15, 2, "DJ-443");
+//        shipmentService.createNewOutgoingShipment(3, 1, 33, 1, "JJ-13");
+
+//        System.out.println("------------------------------------------------------------");
+//        shipperService.createNewShipper("JCS", "555-111-222");
+//        shipperService.updateShipper(4, "JCS", "444-111-222");
 
 
         ctx.close();

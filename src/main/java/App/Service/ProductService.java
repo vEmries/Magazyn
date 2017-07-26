@@ -24,6 +24,16 @@ public class ProductService {
 
     @Transactional
     @Modifying
+    public void updateProductStock(Integer productID, Integer quantity) {
+
+        WarehouseStock updatedWarehouseProduct = warehouseStockRepo.findByProductid(productID);
+        updatedWarehouseProduct.setQuantity(quantity);
+
+        warehouseStockRepo.save(updatedWarehouseProduct);
+    }
+
+    @Transactional
+    @Modifying
     public void createNewProduct(String productName, String packagingType, String size, Integer quantity) {
 
         ProductInfo newProduct = new ProductInfo();
@@ -58,16 +68,6 @@ public class ProductService {
 
         warehouseStockRepo.save(updatedWarehouseProduct);
 
-    }
-
-    @Transactional
-    @Modifying
-    public void updateProductQuantity(Integer productID, Integer quantity) {
-
-        WarehouseStock updatedWarehouseProduct = warehouseStockRepo.findByProductid(productID);
-        updatedWarehouseProduct.setQuantity(quantity);
-
-        warehouseStockRepo.save(updatedWarehouseProduct);
     }
 
     @Transactional

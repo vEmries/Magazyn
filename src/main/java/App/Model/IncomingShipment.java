@@ -16,4 +16,5 @@ public class IncomingShipment {
     Integer shipperid;
     Integer quantity;
     Integer permissionby;
+    String shipmentnumber;
 }
