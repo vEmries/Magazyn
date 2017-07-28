@@ -55,8 +55,7 @@ public class ProductService {
     @Modifying
     public void updateProductInfo(Integer detailID, String productName, String packagingType, String size) {
 
-        ProductInfo updatedProduct = new ProductInfo();
-        updatedProduct.setDetailid(detailID);
+        ProductInfo updatedProduct = productInfoRepo.findByDetailid(detailID);
         updatedProduct.setProductname(productName);
         updatedProduct.setPackagingtype(packagingType);
         updatedProduct.setSize(size);

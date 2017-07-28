@@ -56,7 +56,7 @@ public class OfflineQueries {
 //        System.out.println("------------------------------------------------------------");
 
 //        productService.createNewProduct("Japka - luz", "Brak opakowania", "1szt = 1kg", 100);
-//        productService.updateProductInfo(8, "Japka - luz", "Brak opakowania", "1szt = 1,5kg");
+//        productService.updateProductInfo(8, "Japka - luz", "Brak opakowania", "1szt = 3kg");
 //        productService.deleteProduct(7);
 
 //        System.out.println("------------------------------------------------------------");
