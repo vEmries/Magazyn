@@ -11,4 +11,5 @@ public interface OutgoingShipmentRepo extends CrudRepository<OutgoingShipment, I
 
     @Query("select s.shipmentid from OutgoingShipment s")
     List<Integer> getOutgoingShipmentIDs();
+
 }

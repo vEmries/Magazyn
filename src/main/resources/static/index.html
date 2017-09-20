@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Magazyn</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+        
+        <script src="js/myApp.js"></script>
+        <script src="js/controllers/myCtrl.js"></script>
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+    
+    <body ng-app="myApp">
+        <div class="panel-body" ng-controller="myCtrl">
+            
+                <div class="btn btn-primary" ng-click="loadStock()"> Load stock from http </div>
+                {{stock}}
+
+                <table class="table table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Product</td>
+                            <td>Quantity</td>
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        <tr ng-repeat="item in stock">
+                            <td>{{item.productid}}</td>
+                            <td>{{item.productname}}</td>
+                            <td>{{item.quantity}}</td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+            
+    </body>
+</html>
